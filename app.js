@@ -38,8 +38,8 @@ require('./routes')(app);
 
 
 // Start server
-server.listen(8080, '127.0.0.1', function () {
-  console.log('Express server listening on 127.0.0.1:8080 ');
+server.listen(9000, '127.0.0.1', function () {
+  console.log('Express server listening on 127.0.0.1:9000 ');
 });
 
 // Expose app

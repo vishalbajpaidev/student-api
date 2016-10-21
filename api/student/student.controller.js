@@ -3,16 +3,16 @@
 var _ = require('lodash');
 var Student = require('./student.model');
 
-// Get list of locations
+// Get list of students
 exports.index = function(req, res) {
   //console.log(req.user._id);
-  Student.find(function (err, locations) {
+  Student.find(function (err, students) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(locations);
+    return res.status(200).json(students);
   });
 };
 
-// Get a single location
+// Get a single student
 exports.show = function(req, res) {
   Student.findById(req.params.id, function (err, student) {
     if(err) { return handleError(res, err); }
@@ -21,7 +21,7 @@ exports.show = function(req, res) {
   });
 };
 
-// Creates a new location in the DB.
+// Creates a new student in the DB.
 exports.create = function(req, res) {
   Student.create(req.body, function(err, student) {
     if(err) { return handleError(res, err); }
@@ -29,7 +29,7 @@ exports.create = function(req, res) {
   });
 };
 
-// Updates an existing location in the DB.
+// Updates an existing student in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
   Student.findById(req.params.id, function (err, student) {
@@ -43,7 +43,7 @@ exports.update = function(req, res) {
   });
 };
 
-// Deletes a location from the DB.
+// Deletes a student from the DB.
 exports.destroy = function(req, res) {
   Student.findById(req.params.id, function (err, student) {
     if(err) { return handleError(res, err); }
