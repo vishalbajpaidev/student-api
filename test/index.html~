@@ -1,0 +1,17 @@
+<html>
+      <head>
+        <title>expressworks</title>
+        <link rel="stylesheet" type="text/css" href="/main.css"/>
+      </head>
+      <body>
+	POSt
+        <form method="post" action="/form"><input name="str"/></form>
+	get
+        <form method="get" action="/form"><input name="str"/></form>
+     
+	Put
+        <form method="get" action="/form"><input name="str"/></form>
+      
+	</body>
+    </html>
+
